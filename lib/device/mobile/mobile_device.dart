@@ -11,22 +11,22 @@ class MobileDevice extends StatelessWidget {
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
     if (MediaQuery.of(context).orientation == Orientation.portrait) {
-      return Column(
-        children: [
-          DevPic(
-            height: 300,
-            width: _size.width,
-          ),
-          Padding(
-            padding: EdgeInsets.all(5.0),
-            child: BuildText(
+      return Padding(
+        padding: EdgeInsets.all(5.0),
+        child: Column(
+          children: [
+            DevPic(
+              height: 300,
+              width: _size.width,
+            ),
+            BuildText(
               color: Colors.black,
               fontweight: FontWeight.bold,
               text: 'Flutter Developer',
               size: 20.0,
             ),
-          )
-        ],
+          ],
+        ),
       );
     } else {
       return Row(
