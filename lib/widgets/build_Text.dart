@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class BuildText extends StatelessWidget {
   final String text;
   final FontWeight fontweight;
-  final double size, height;
+  final double size, height, spacing;
   final Color color;
 
   const BuildText({
@@ -14,6 +14,7 @@ class BuildText extends StatelessWidget {
     this.color,
     this.fontweight,
     this.height,
+    this.spacing,
   }) : super(key: key);
 
   @override
@@ -25,7 +26,7 @@ class BuildText extends StatelessWidget {
         color: color,
         fontSize: size,
         fontWeight: fontweight,
-        letterSpacing: 10,
+        letterSpacing: spacing,
       ),
     );
   }

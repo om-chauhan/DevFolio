@@ -1,4 +1,4 @@
-import 'package:devomi/widgets/build_Text.dart';
+import 'package:devomi/widgets/build_text.dart';
 import 'package:flutter/material.dart';
 
 class DesktopDevice extends StatelessWidget {

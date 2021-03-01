@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton extends StatelessWidget {
   final String image;
   final double height, width;
+  final IconData icon;
+
   const SocialButton({
     Key key,
     this.image,
     this.height,
     this.width,
+    this.icon,
   }) : super(key: key);
 
   @override
@@ -16,7 +18,9 @@ class SocialButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(5.0),
       child: IconButton(
-        icon: Icon(FontAwesomeIcons.github),
+        icon: Icon(
+          icon,
+        ),
         onPressed: () {},
       ),
     );
