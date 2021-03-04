@@ -1,9 +1,11 @@
+import 'package:devomi/helper/config.dart';
 import 'package:devomi/widgets/build_button.dart';
 import 'package:devomi/widgets/build_text.dart';
 import 'package:devomi/widgets/dev_pic.dart';
 import 'package:devomi/widgets/social_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../widgets/skills_tile.dart';
 import '../../widgets/portfolio_tile.dart';
 
@@ -160,30 +162,62 @@ class MobilePortrait extends StatelessWidget {
           ),
           Wrap(
             children: [
-              PortfolioTile(
-                text: 'Mera desh - Educational App',
-                height: 150,
-                width: 150,
+              InkWell(
+                onTap: _project1,
+                child: PortfolioTile(
+                  text: 'Mera desh - Educational App',
+                  height: 150,
+                  width: 150,
+                ),
               ),
-              PortfolioTile(
-                text: 'Super Store - E-Commerce App',
-                height: 150,
-                width: 150,
+              InkWell(
+                onTap: _project2,
+                child: PortfolioTile(
+                  text: 'Super Store - E-Commerce App',
+                  height: 150,
+                  width: 150,
+                ),
               ),
-              PortfolioTile(
-                text: 'Devomi - Portfolio',
-                height: 150,
-                width: 150,
+              InkWell(
+                onTap: _project3,
+                child: PortfolioTile(
+                  text: 'Devomi - Portfolio',
+                  height: 150,
+                  width: 150,
+                ),
               ),
-              PortfolioTile(
-                text: 'Simple Calculator',
-                height: 150,
-                width: 150,
+              InkWell(
+                onTap: _project4,
+                child: PortfolioTile(
+                  text: 'Simple Calculator',
+                  height: 150,
+                  width: 150,
+                ),
               ),
             ],
           ),
         ],
       ),
     ]);
+  }
+
+  void _project1() async {
+    const _url = Config.ProjectLink1;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _project2() async {
+    const _url = Config.ProjectLink2;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _project3() async {
+    const _url = Config.ProjectLink3;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _project4() async {
+    const _url = Config.ProjectLink4;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
   }
 }
