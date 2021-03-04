@@ -10,8 +10,9 @@ class MobilePortrait extends StatelessWidget {
   const MobilePortrait({
     Key key,
     @required Size size,
-  }) : super(key: key);
-
+  })  : _size = size,
+        super(key: key);
+  final Size _size;
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -20,15 +21,15 @@ class MobilePortrait extends StatelessWidget {
         children: [
           DevPic(
             height: 300,
-            width: 300,
+            width: _size.width,
           ),
           SizedBox(
             height: 20.0,
           ),
           BuildText(
             color: Colors.black,
-            fontweight: FontWeight.bold,
-            text: 'Hello, Om',
+            fontweight: FontWeight.normal,
+            text: "Hello, I'm",
             size: 20.0,
           ),
           SizedBox(
@@ -36,7 +37,16 @@ class MobilePortrait extends StatelessWidget {
           ),
           BuildText(
             color: Colors.black,
-            fontweight: FontWeight.normal,
+            fontweight: FontWeight.bold,
+            text: 'Omprakash',
+            size: 20.0,
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          BuildText(
+            color: Colors.black,
+            fontweight: FontWeight.w400,
             text: 'Flutter Developer',
             size: 18.0,
           ),
@@ -86,6 +96,8 @@ class MobilePortrait extends StatelessWidget {
             fontweight: FontWeight.bold,
           ),
           Divider(
+            indent: 100,
+            endIndent: 100,
             color: Colors.green,
           ),
           Wrap(
@@ -141,6 +153,8 @@ class MobilePortrait extends StatelessWidget {
             fontweight: FontWeight.bold,
           ),
           Divider(
+            indent: 100,
+            endIndent: 100,
             color: Colors.green,
           ),
           Wrap(
@@ -156,7 +170,7 @@ class MobilePortrait extends StatelessWidget {
                 width: 150,
               ),
               PortfolioTile(
-                text: 'Paper Mart',
+                text: 'Devomi - Portfolio',
                 height: 150,
                 width: 150,
               ),
