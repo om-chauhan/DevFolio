@@ -3,6 +3,7 @@ import 'package:devomi/widgets/build_text.dart';
 import 'package:devomi/widgets/dev_pic.dart';
 import 'package:devomi/widgets/social_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MobilePortrait extends StatelessWidget {
@@ -95,9 +96,10 @@ class MobilePortrait extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.python),
-                    onPressed: () {},
+                  SvgPicture.asset(
+                    'assets/icons/python.svg',
+                    height: 50,
+                    width: 50,
                   ),
                   BuildText(
                     text: 'C',
@@ -106,9 +108,10 @@ class MobilePortrait extends StatelessWidget {
               ),
               Column(
                 children: [
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.cartPlus),
-                    onPressed: () {},
+                  SvgPicture.asset(
+                    'assets/icons/python.svg',
+                    height: 50,
+                    width: 50,
                   ),
                   BuildText(
                     text: 'C++',
@@ -117,9 +120,10 @@ class MobilePortrait extends StatelessWidget {
               ),
               Column(
                 children: [
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.java),
-                    onPressed: () {},
+                  SvgPicture.asset(
+                    'assets/icons/python.svg',
+                    height: 50,
+                    width: 50,
                   ),
                   BuildText(
                     text: 'Java',
@@ -128,9 +132,10 @@ class MobilePortrait extends StatelessWidget {
               ),
               Column(
                 children: [
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.python),
-                    onPressed: () {},
+                  SvgPicture.asset(
+                    'assets/icons/python.svg',
+                    height: 50,
+                    width: 50,
                   ),
                   BuildText(
                     text: 'Python',
@@ -139,9 +144,10 @@ class MobilePortrait extends StatelessWidget {
               ),
               Column(
                 children: [
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.file),
-                    onPressed: () {},
+                  SvgPicture.asset(
+                    'assets/icons/python.svg',
+                    height: 50,
+                    width: 50,
                   ),
                   BuildText(
                     text: 'Dart',

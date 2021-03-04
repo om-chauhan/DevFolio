@@ -12,7 +12,7 @@ class DevPic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image(
-      image: AssetImage('images/dev-pic.png'),
+      image: AssetImage('assets/images/dev-pic.png'),
       height: height,
       width: width,
     );
