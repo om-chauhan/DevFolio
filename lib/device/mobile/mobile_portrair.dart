@@ -84,20 +84,19 @@ class MobilePortrait extends StatelessWidget {
             height: 20.0,
           ),
           BuildText(
-            text: 'Skils',
+            text: 'SKILS',
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
           Divider(
             color: Colors.green,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Wrap(
             children: [
               Column(
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/python.svg',
+                    'assets/icons/c.svg',
                     height: 50,
                     width: 50,
                   ),
@@ -109,7 +108,7 @@ class MobilePortrait extends StatelessWidget {
               Column(
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/python.svg',
+                    'assets/icons/c++.svg',
                     height: 50,
                     width: 50,
                   ),
@@ -121,7 +120,7 @@ class MobilePortrait extends StatelessWidget {
               Column(
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/python.svg',
+                    'assets/icons/java.svg',
                     height: 50,
                     width: 50,
                   ),
@@ -145,7 +144,7 @@ class MobilePortrait extends StatelessWidget {
               Column(
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/python.svg',
+                    'assets/icons/dart.svg',
                     height: 50,
                     width: 50,
                   ),
@@ -160,7 +159,7 @@ class MobilePortrait extends StatelessWidget {
             height: 20.0,
           ),
           BuildText(
-            text: 'Portfolio',
+            text: 'PORTFOLIO',
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
@@ -168,28 +167,13 @@ class MobilePortrait extends StatelessWidget {
             color: Colors.green,
           ),
           Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/portfolio.png'),
-                fit: BoxFit.cover,
-              ),
+            height: 150,
+            width: 150,
+            decoration: BoxDecoration(),
+            child: BuildText(
+              text: 'Mera Desh - Educational App',
             ),
-            height: 300.0,
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white10,
-              ),
-              alignment: Alignment.bottomLeft,
-              height: 20.0,
-              width: MediaQuery.of(context).size.width,
-              child: BuildText(
-                color: Colors.black,
-                text: 'Project Name',
-                size: 15.0,
-              ),
-            ),
-          )
+          ),
         ],
       ),
     ]);
