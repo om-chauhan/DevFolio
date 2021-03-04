@@ -3,8 +3,9 @@ import 'package:devomi/widgets/build_text.dart';
 import 'package:devomi/widgets/dev_pic.dart';
 import 'package:devomi/widgets/social_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../widgets/skills_tile.dart';
+import '../../widgets/portfolio_tile.dart';
 
 class MobilePortrait extends StatelessWidget {
   const MobilePortrait({
@@ -184,73 +185,5 @@ class MobilePortrait extends StatelessWidget {
         ],
       ),
     ]);
-  }
-}
-
-class PortfolioTile extends StatelessWidget {
-  final String text;
-  final double height, width;
-
-  const PortfolioTile({
-    Key key,
-    this.text,
-    this.height,
-    this.width,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.bottomLeft,
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
-        color: Colors.white,
-      ),
-      child: BuildText(
-        text: text,
-      ),
-    );
-  }
-}
-
-class SkillsTile extends StatelessWidget {
-  final String text;
-  final double imgHeight, imgWidth, textHeight;
-  final String image;
-  final Color color;
-  final FontWeight fontweight;
-
-  const SkillsTile({
-    Key key,
-    this.text,
-    this.image,
-    this.color,
-    this.fontweight,
-    this.imgHeight,
-    this.imgWidth,
-    this.textHeight,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(5.0),
-      child: Column(
-        children: [
-          SvgPicture.asset(
-            image,
-            height: imgHeight,
-            width: imgWidth,
-          ),
-          BuildText(
-            color: color,
-            text: text,
-            fontweight: fontweight,
-            height: textHeight,
-          )
-        ],
-      ),
-    );
   }
 }
