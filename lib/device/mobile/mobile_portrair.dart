@@ -92,6 +92,7 @@ class MobilePortrait extends StatelessWidget {
             color: Colors.green,
           ),
           Wrap(
+            runAlignment: WrapAlignment.spaceAround,
             children: [
               Column(
                 children: [
@@ -166,10 +167,16 @@ class MobilePortrait extends StatelessWidget {
           Divider(
             color: Colors.green,
           ),
+          Wrap(
+            children: [],
+          ),
           Container(
+            alignment: Alignment.bottomLeft,
             height: 150,
             width: 150,
-            decoration: BoxDecoration(),
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ),
             child: BuildText(
               text: 'Mera Desh - Educational App',
             ),
