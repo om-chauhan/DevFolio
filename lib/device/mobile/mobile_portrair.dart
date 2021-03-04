@@ -10,10 +10,7 @@ class MobilePortrait extends StatelessWidget {
   const MobilePortrait({
     Key key,
     @required Size size,
-  })  : _size = size,
-        super(key: key);
-
-  final Size _size;
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +20,7 @@ class MobilePortrait extends StatelessWidget {
         children: [
           DevPic(
             height: 300,
-            width: _size.width,
+            width: 300,
           ),
           SizedBox(
             height: 20.0,
@@ -50,7 +47,7 @@ class MobilePortrait extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SocialButton(
-                icon: FontAwesomeIcons.mailchimp,
+                icon: FontAwesomeIcons.envelopeOpenText,
               ),
               SocialButton(
                 icon: FontAwesomeIcons.github,
@@ -92,67 +89,46 @@ class MobilePortrait extends StatelessWidget {
             color: Colors.green,
           ),
           Wrap(
-            runAlignment: WrapAlignment.spaceAround,
             children: [
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'assets/icons/c.svg',
-                    height: 50,
-                    width: 50,
-                  ),
-                  BuildText(
-                    text: 'C',
-                  )
-                ],
+              SkillsTile(
+                text: 'C',
+                color: Colors.black,
+                fontweight: FontWeight.normal,
+                image: 'assets/icons/c.svg',
+                imgHeight: 50,
+                imgWidth: 50,
               ),
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'assets/icons/c++.svg',
-                    height: 50,
-                    width: 50,
-                  ),
-                  BuildText(
-                    text: 'C++',
-                  )
-                ],
+              SkillsTile(
+                text: 'C++',
+                color: Colors.black,
+                fontweight: FontWeight.normal,
+                image: 'assets/icons/c++.svg',
+                imgHeight: 50,
+                imgWidth: 50,
               ),
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'assets/icons/java.svg',
-                    height: 50,
-                    width: 50,
-                  ),
-                  BuildText(
-                    text: 'Java',
-                  )
-                ],
+              SkillsTile(
+                text: 'Java',
+                color: Colors.black,
+                fontweight: FontWeight.normal,
+                image: 'assets/icons/java.svg',
+                imgHeight: 50,
+                imgWidth: 50,
               ),
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'assets/icons/python.svg',
-                    height: 50,
-                    width: 50,
-                  ),
-                  BuildText(
-                    text: 'Python',
-                  )
-                ],
+              SkillsTile(
+                text: 'Python',
+                color: Colors.black,
+                fontweight: FontWeight.normal,
+                image: 'assets/icons/python.svg',
+                imgHeight: 50,
+                imgWidth: 50,
               ),
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'assets/icons/dart.svg',
-                    height: 50,
-                    width: 50,
-                  ),
-                  BuildText(
-                    text: 'Dart',
-                  )
-                ],
+              SkillsTile(
+                text: 'Dart',
+                color: Colors.black,
+                fontweight: FontWeight.normal,
+                image: 'assets/icons/dart.svg',
+                imgHeight: 50,
+                imgWidth: 50,
               ),
             ],
           ),
@@ -168,21 +144,99 @@ class MobilePortrait extends StatelessWidget {
             color: Colors.green,
           ),
           Wrap(
-            children: [],
-          ),
-          Container(
-            alignment: Alignment.bottomLeft,
-            height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-            child: BuildText(
-              text: 'Mera Desh - Educational App',
-            ),
+            children: [
+              PortfolioTile(
+                text: 'Mera desh - Educational App',
+                height: 150,
+                width: 150,
+              ),
+              PortfolioTile(
+                text: 'Super Store - E-Commerce App',
+                height: 150,
+                width: 150,
+              ),
+              PortfolioTile(
+                text: 'Paper Mart',
+                height: 150,
+                width: 150,
+              ),
+              PortfolioTile(
+                text: 'Simple Calculator',
+                height: 150,
+                width: 150,
+              ),
+            ],
           ),
         ],
       ),
     ]);
+  }
+}
+
+class PortfolioTile extends StatelessWidget {
+  final String text;
+  final double height, width;
+
+  const PortfolioTile({
+    Key key,
+    this.text,
+    this.height,
+    this.width,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.bottomLeft,
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
+      child: BuildText(
+        text: text,
+      ),
+    );
+  }
+}
+
+class SkillsTile extends StatelessWidget {
+  final String text;
+  final double imgHeight, imgWidth, textHeight;
+  final String image;
+  final Color color;
+  final FontWeight fontweight;
+
+  const SkillsTile({
+    Key key,
+    this.text,
+    this.image,
+    this.color,
+    this.fontweight,
+    this.imgHeight,
+    this.imgWidth,
+    this.textHeight,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(5.0),
+      child: Column(
+        children: [
+          SvgPicture.asset(
+            image,
+            height: imgHeight,
+            width: imgWidth,
+          ),
+          BuildText(
+            color: color,
+            text: text,
+            fontweight: fontweight,
+            height: textHeight,
+          )
+        ],
+      ),
+    );
   }
 }
