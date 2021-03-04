@@ -16,12 +16,9 @@ class SocialButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(5.0),
-      child: IconButton(
-        icon: Icon(
-          icon,
-        ),
-        onPressed: () {},
+      padding: EdgeInsets.all(10.0),
+      child: Icon(
+        icon,
       ),
     );
   }

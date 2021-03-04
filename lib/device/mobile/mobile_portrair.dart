@@ -59,17 +59,37 @@ class MobilePortrait extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SocialButton(
-                icon: FontAwesomeIcons.envelopeOpenText,
+              Material(
+                child: InkWell(
+                  onTap: _mail,
+                  child: SocialButton(
+                    icon: FontAwesomeIcons.envelopeOpenText,
+                  ),
+                ),
               ),
-              SocialButton(
-                icon: FontAwesomeIcons.github,
+              Material(
+                child: InkWell(
+                  onTap: _github,
+                  child: SocialButton(
+                    icon: FontAwesomeIcons.github,
+                  ),
+                ),
               ),
-              SocialButton(
-                icon: FontAwesomeIcons.linkedin,
+              Material(
+                child: InkWell(
+                  onTap: _linkedin,
+                  child: SocialButton(
+                    icon: FontAwesomeIcons.linkedin,
+                  ),
+                ),
               ),
-              SocialButton(
-                icon: FontAwesomeIcons.facebook,
+              Material(
+                child: InkWell(
+                  onTap: _fb,
+                  child: SocialButton(
+                    icon: FontAwesomeIcons.facebook,
+                  ),
+                ),
               ),
             ],
           ),
@@ -199,6 +219,32 @@ class MobilePortrait extends StatelessWidget {
         ],
       ),
     ]);
+  }
+
+  void _mail() async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: 'krissh1209@gmail.com',
+      query:
+          'subject=Hey !&body=Types your Message here', //add subject and body here
+    );
+    var _url = params.toString();
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _github() async {
+    const _url = Config.GITHUB;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _linkedin() async {
+    const _url = Config.LINKEDIN;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _fb() async {
+    const _url = Config.FB;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
   }
 
   void _project1() async {

@@ -1,9 +1,13 @@
 mixin Config {
   static const TITLE = 'Portfolio';
-  static const GITHUB = 'https://github.com/';
-  static const LINKEDIN = 'https://in.linkedin.com/';
-  static const GMAIL = 'https://www.google.com/gmail/';
-  static const FB = 'https://www.facebook.com/';
+  static const GITHUB = 'https://github.com/om-chauhan';
+  static const LINKEDIN = 'https://www.linkedin.com/in/omprakash-chauhan/';
+  static const GMAIL =
+      'mailto:krissh1209@gmail.com?subject=Hey !&body=Type message here';
+
+  static const FB = 'https://www.facebook.com/omiorop';
+  static const CV =
+      'https://drive.google.com/file/d/1p36s7SF82R96J2-gCypdEemzMKcoMngX/view?usp=sharing';
 
 //Project Titles
   static const ProjectTitle1 = 'Mera Desh - Educational App';
