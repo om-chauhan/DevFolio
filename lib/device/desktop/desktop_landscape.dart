@@ -2,15 +2,15 @@ import 'package:devomi/helper/config.dart';
 import 'package:devomi/widgets/build_button.dart';
 import 'package:devomi/widgets/build_text.dart';
 import 'package:devomi/widgets/dev_pic.dart';
+import 'package:devomi/widgets/portfolio_tile.dart';
 import 'package:devomi/widgets/social_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../widgets/skills_tile.dart';
-import '../../widgets/portfolio_tile.dart';
 
-class MobileLandscape extends StatelessWidget {
-  const MobileLandscape({
+class DesktopLandscape extends StatelessWidget {
+  const DesktopLandscape({
     Key key,
   }) : super(key: key);
 
@@ -23,8 +23,8 @@ class MobileLandscape extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DevPic(
-                height: 200,
-                width: 200,
+                height: 300,
+                width: 300,
               ),
               SizedBox(
                 width: 20.0,
@@ -187,10 +187,12 @@ class MobileLandscape extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          PortfolioTile(
-            height: 150,
-            width: 150,
-          ),
+          Wrap(children: [
+            PortfolioTile(
+              height: 150,
+              width: 150,
+            ),
+          ]),
         ],
       ),
     );

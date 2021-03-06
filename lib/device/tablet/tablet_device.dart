@@ -1,19 +1,35 @@
-import 'package:devomi/widgets/build_text.dart';
+import 'package:devomi/device/tablet/tablet_landscape.dart';
+import 'package:devomi/device/tablet/tablet_portrair.dart';
 import 'package:flutter/material.dart';
 
 class TabletDevice extends StatelessWidget {
   const TabletDevice({
     Key key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: BuildText(
-        color: Colors.black,
-        size: 50.0,
-        text: 'Tablet',
-      ),
-    );
+    if (MediaQuery.of(context).orientation == Orientation.portrait) {
+      print('Tablet');
+      print(Orientation.portrait);
+      return SafeArea(
+        child: Scaffold(
+          body: Padding(
+            padding: EdgeInsets.all(5.0),
+            child: TabletPortrait(),
+          ),
+        ),
+      );
+    } else {
+      print('Tablet');
+      print(Orientation.landscape);
+      return SafeArea(
+        child: Scaffold(
+          body: Padding(
+            padding: EdgeInsets.all(5.0),
+            child: TabletLandscape(),
+          ),
+        ),
+      );
+    }
   }
 }

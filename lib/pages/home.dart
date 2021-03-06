@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var isLargeScreen = false;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

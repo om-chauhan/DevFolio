@@ -14,6 +14,18 @@ mixin Config {
   static const ProjectTitle2 = 'Mera Desh - Educational App';
   static const ProjectTitle3 = 'Mera Desh - Educational App';
   static const ProjectTitle4 = 'Mera Desh - Educational App';
+  var projectTitles = [
+    'Mera desh - Educational App',
+    'Super Store - E-Commerce App',
+    'Devomi - Portfolio',
+    'Simple Calculator'
+  ];
+  var projectLinks = [
+    'https://play.google.com/store/apps/details?id=com.adbytee.mera_desh',
+    'https://github.com/om-chauhan/Super-Store-Ecommerce-App-using-REST-Api-in-Flutter',
+    'https://github.com/om-chauhan/devomi',
+    'https://github.com/om-chauhan/Simple-Calculator-Flutter'
+  ];
 //Project URLS
   static const ProjectLink1 =
       'https://play.google.com/store/apps/details?id=com.adbytee.mera_desh';

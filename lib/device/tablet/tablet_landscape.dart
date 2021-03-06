@@ -9,8 +9,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../widgets/skills_tile.dart';
 import '../../widgets/portfolio_tile.dart';
 
-class MobileLandscape extends StatelessWidget {
-  const MobileLandscape({
+class TabletLandscape extends StatelessWidget {
+  const TabletLandscape({
     Key key,
   }) : super(key: key);
 
@@ -23,8 +23,8 @@ class MobileLandscape extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DevPic(
-                height: 200,
-                width: 200,
+                height: 300,
+                width: 300,
               ),
               SizedBox(
                 width: 20.0,

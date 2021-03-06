@@ -10,22 +10,25 @@ class MobileDevice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
     if (MediaQuery.of(context).orientation == Orientation.portrait) {
+      print('Mobile');
+      print(Orientation.landscape);
       return SafeArea(
         child: Scaffold(
           body: Padding(
             padding: EdgeInsets.all(5.0),
-            child: MobilePortrait(size: _size),
+            child: MobilePortrait(),
           ),
         ),
       );
     } else {
+      print('Mobile');
+      print(Orientation.landscape);
       return SafeArea(
         child: Scaffold(
           body: Padding(
             padding: EdgeInsets.all(5.0),
-            child: MobileLandscape(size: _size),
+            child: MobileLandscape(),
           ),
         ),
       );

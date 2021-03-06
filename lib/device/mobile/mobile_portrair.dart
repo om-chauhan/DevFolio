@@ -12,10 +12,7 @@ import '../../widgets/portfolio_tile.dart';
 class MobilePortrait extends StatelessWidget {
   const MobilePortrait({
     Key key,
-    @required Size size,
-  })  : _size = size,
-        super(key: key);
-  final Size _size;
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -23,8 +20,8 @@ class MobilePortrait extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DevPic(
-            height: 300,
-            width: _size.width,
+            height: 200,
+            width: 200,
           ),
           SizedBox(
             height: 20.0,
@@ -118,10 +115,8 @@ class MobilePortrait extends StatelessWidget {
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
-          Divider(
-            indent: 100,
-            endIndent: 100,
-            color: Colors.green,
+          SizedBox(
+            height: 20.0,
           ),
           Wrap(
             children: [
@@ -175,46 +170,12 @@ class MobilePortrait extends StatelessWidget {
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
-          Divider(
-            indent: 100,
-            endIndent: 100,
-            color: Colors.green,
+          SizedBox(
+            height: 20.0,
           ),
-          Wrap(
-            children: [
-              InkWell(
-                onTap: _project1,
-                child: PortfolioTile(
-                  text: 'Mera desh - Educational App',
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-              InkWell(
-                onTap: _project2,
-                child: PortfolioTile(
-                  text: 'Super Store - E-Commerce App',
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-              InkWell(
-                onTap: _project3,
-                child: PortfolioTile(
-                  text: 'Devomi - Portfolio',
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-              InkWell(
-                onTap: _project4,
-                child: PortfolioTile(
-                  text: 'Simple Calculator',
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-            ],
+          PortfolioTile(
+            height: 150,
+            width: 150,
           ),
         ],
       ),
@@ -244,26 +205,6 @@ class MobilePortrait extends StatelessWidget {
 
   void _fb() async {
     const _url = Config.FB;
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-  }
-
-  void _project1() async {
-    const _url = Config.ProjectLink1;
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-  }
-
-  void _project2() async {
-    const _url = Config.ProjectLink2;
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-  }
-
-  void _project3() async {
-    const _url = Config.ProjectLink3;
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-  }
-
-  void _project4() async {
-    const _url = Config.ProjectLink4;
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
   }
 }
