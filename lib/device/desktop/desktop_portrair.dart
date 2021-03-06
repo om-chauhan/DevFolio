@@ -2,6 +2,7 @@ import 'package:devomi/helper/config.dart';
 import 'package:devomi/widgets/build_button.dart';
 import 'package:devomi/widgets/build_text.dart';
 import 'package:devomi/widgets/dev_pic.dart';
+import 'package:devomi/widgets/portfolio_tile.dart';
 import 'package:devomi/widgets/social_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -171,10 +172,13 @@ class DesktopPortrait extends StatelessWidget {
         SizedBox(
           height: 20.0,
         ),
-        ListView(
-          shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
-          children: [],
+        Wrap(
+          children: [
+            PortfolioTile(
+              height: 150,
+              width: 150,
+            ),
+          ],
         ),
       ],
     );

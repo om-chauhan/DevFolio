@@ -187,12 +187,14 @@ class DesktopLandscape extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          Wrap(children: [
-            PortfolioTile(
-              height: 150,
-              width: 150,
-            ),
-          ]),
+          Wrap(
+            children: [
+              PortfolioTile(
+                height: 150,
+                width: 150,
+              ),
+            ],
+          ),
         ],
       ),
     );
