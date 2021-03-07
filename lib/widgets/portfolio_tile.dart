@@ -25,21 +25,20 @@ class PortfolioTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.center,
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
-                    color: Colors.green,
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '01',
                       color: Colors.black,
-                      size: 40,
+                      size: 100,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
@@ -69,21 +68,20 @@ class PortfolioTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.center,
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
-                    color: Colors.green,
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '02',
                       color: Colors.black,
-                      size: 40,
+                      size: 100,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
@@ -113,21 +111,20 @@ class PortfolioTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.center,
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
-                    color: Colors.green,
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '03',
                       color: Colors.black,
-                      size: 40,
+                      size: 100,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
@@ -157,21 +154,20 @@ class PortfolioTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.center,
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
-                    color: Colors.green,
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '04',
                       color: Colors.black,
-                      size: 40,
+                      size: 100,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
