@@ -1,5 +1,6 @@
-import 'package:devomi/device/desktop/desktop_portrair.dart';
 import 'package:flutter/material.dart';
+
+import 'desktop_portrair.dart';
 
 class DesktopDevice extends StatelessWidget {
   const DesktopDevice({

@@ -1,8 +1,8 @@
-import 'package:devomi/helper/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../helper/config.dart';
 import 'build_text.dart';
 
 class PortfolioTile extends StatelessWidget {

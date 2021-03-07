@@ -1,7 +1,8 @@
-import 'package:devomi/device/desktop/desktop_device.dart';
-import 'package:devomi/device/mobile/mobile_device.dart';
-import 'package:devomi/device/tablet/tablet_device.dart';
 import 'package:flutter/material.dart';
+
+import '../device/desktop/desktop_device.dart';
+import '../device/mobile/mobile_device.dart';
+import '../device/tablet/tablet_device.dart';
 
 class HomePage extends StatefulWidget {
   @override

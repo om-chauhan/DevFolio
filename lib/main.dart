@@ -1,8 +1,9 @@
-import 'package:devomi/helper/config.dart';
-import 'package:devomi/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'helper/config.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(MyApp());
