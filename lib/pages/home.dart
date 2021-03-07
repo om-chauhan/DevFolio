@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../device/desktop/desktop_device.dart';
-import '../device/mobile/mobile_device.dart';
-import '../device/tablet/tablet_device.dart';
+import '../device/desktop/desktop_portrair.dart';
+import '../device/mobile/mobile_portrair.dart';
+import '../device/tablet/tablet_portrair.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,12 +17,12 @@ class _HomePageState extends State<HomePage> {
         body: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 767) {
-              return MobileDevice();
+              return MobilePortrait();
             } else if (constraints.maxWidth >= 768 &&
                 constraints.maxWidth <= 1023) {
-              return TabletDevice();
+              return TabletPortrait();
             } else {
-              return DesktopDevice();
+              return DesktopPortrait();
             }
           },
         ),
