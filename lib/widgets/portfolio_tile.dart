@@ -9,187 +9,185 @@ class PortfolioTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      alignment: WrapAlignment.spaceAround,
+      direction: Axis.horizontal,
       children: [
-        Container(
-          height: 200,
-          alignment: Alignment.center,
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width * 0.90,
-          child: InkWell(
-            onTap: () async {
-              final url = Config.ProjectLink1;
-              await canLaunch(url)
-                  ? await launch(url)
-                  : throw 'Could not launch $url';
-            },
-            child: Padding(
-              padding: EdgeInsets.all(5),
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      color: Colors.green,
+        InkWell(
+          onTap: () async {
+            final url = Config.ProjectLink1;
+            await canLaunch(url)
+                ? await launch(url)
+                : throw 'Could not launch $url';
+          },
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
                     ),
+                    color: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '01',
                       color: Colors.black,
-                      size: 30,
+                      size: 40,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: BuildText(
-                      text: Config.ProjectTitle1,
-                    ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: BuildText(
+                    size: 12,
+                    text: Config.ProjectTitle1,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
-        Container(
-          height: 200,
-          alignment: Alignment.center,
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width * 0.90,
-          child: InkWell(
-            onTap: () async {
-              final url = Config.ProjectLink2;
-              await canLaunch(url)
-                  ? await launch(url)
-                  : throw 'Could not launch $url';
-            },
-            child: Padding(
-              padding: EdgeInsets.all(5),
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      color: Colors.green,
+        InkWell(
+          onTap: () async {
+            final url = Config.ProjectLink2;
+            await canLaunch(url)
+                ? await launch(url)
+                : throw 'Could not launch $url';
+          },
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
                     ),
+                    color: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '02',
                       color: Colors.black,
-                      size: 30,
+                      size: 40,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: BuildText(
-                      text: Config.ProjectTitle2,
-                    ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: BuildText(
+                    size: 12,
+                    text: Config.ProjectTitle2,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
-        Container(
-          height: 200,
-          alignment: Alignment.center,
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width * 0.90,
-          child: InkWell(
-            onTap: () async {
-              final url = Config.ProjectLink3;
-              await canLaunch(url)
-                  ? await launch(url)
-                  : throw 'Could not launch $url';
-            },
-            child: Padding(
-              padding: EdgeInsets.all(5),
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      color: Colors.green,
+        InkWell(
+          onTap: () async {
+            final url = Config.ProjectLink3;
+            await canLaunch(url)
+                ? await launch(url)
+                : throw 'Could not launch $url';
+          },
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
                     ),
+                    color: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '03',
                       color: Colors.black,
-                      size: 30,
+                      size: 40,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: BuildText(
-                      text: Config.ProjectTitle3,
-                    ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: BuildText(
+                    size: 12,
+                    text: Config.ProjectTitle3,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
-        Container(
-          height: 200,
-          alignment: Alignment.center,
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width * 0.90,
-          child: InkWell(
-            onTap: () async {
-              final url = Config.ProjectLink4;
-              await canLaunch(url)
-                  ? await launch(url)
-                  : throw 'Could not launch $url';
-            },
-            child: Padding(
-              padding: EdgeInsets.all(5),
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      color: Colors.green,
+        InkWell(
+          onTap: () async {
+            final url = Config.ProjectLink4;
+            await canLaunch(url)
+                ? await launch(url)
+                : throw 'Could not launch $url';
+          },
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
                     ),
+                    color: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
                     child: BuildText(
                       text: '04',
                       color: Colors.black,
-                      size: 30,
+                      size: 40,
                       spacing: 2,
                       fontweight: FontWeight.bold,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: BuildText(
-                      text: Config.ProjectTitle4,
-                    ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: BuildText(
+                    size: 12,
+                    text: Config.ProjectTitle4,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        )
+        ),
       ],
     );
   }
