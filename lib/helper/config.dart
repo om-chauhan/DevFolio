@@ -1,5 +1,5 @@
 mixin Config {
-  static const TITLE = 'Portfolio';
+  static const TITLE = 'DevFolio';
   static const GITHUB = 'https://github.com/om-chauhan';
   static const LINKEDIN = 'https://www.linkedin.com/in/omprakash-chauhan/';
   static const GMAIL =

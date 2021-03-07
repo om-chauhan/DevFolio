@@ -17,10 +17,16 @@ class BuildButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      shape: border,
-      color: btncolor,
-      onPressed: () {},
+    return Container(
+      alignment: Alignment.center,
+      width: 70,
+      height: 30,
+      decoration: BoxDecoration(
+        color: btncolor,
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+      ),
       child: BuildText(
         text: text,
         color: txtcolor,

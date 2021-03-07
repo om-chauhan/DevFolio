@@ -1,3 +1,4 @@
+import 'package:devomi/helper/config.dart';
 import 'package:devomi/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Portfolio',
+      title: Config.TITLE,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           color: Colors.green,

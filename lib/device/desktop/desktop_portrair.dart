@@ -96,14 +96,22 @@ class DesktopPortrait extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            BuildButton(
-              btncolor: Colors.green,
-              text: 'Hire Me',
-              txtcolor: Colors.white,
+            InkWell(
+              onTap: _github,
+              child: BuildButton(
+                btncolor: Colors.green,
+                text: 'Github',
+                txtcolor: Colors.white,
+              ),
             ),
-            BuildButton(
-              text: 'CV',
-              border: OutlineInputBorder(),
+            InkWell(
+              onTap: _cv,
+              child: BuildButton(
+                txtcolor: Colors.white,
+                text: 'CV',
+                btncolor: Colors.black26,
+                border: OutlineInputBorder(),
+              ),
             ),
           ],
         ),
@@ -201,6 +209,11 @@ class DesktopPortrait extends StatelessWidget {
 
   void _fb() async {
     const _url = Config.FB;
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+  }
+
+  void _cv() async {
+    const _url = Config.CV;
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
   }
 }
