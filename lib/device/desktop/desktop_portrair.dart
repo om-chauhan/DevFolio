@@ -15,7 +15,8 @@ class DesktopPortrait extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return SingleChildScrollView(
+        child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         DevPic(
@@ -172,16 +173,9 @@ class DesktopPortrait extends StatelessWidget {
         SizedBox(
           height: 20.0,
         ),
-        Wrap(
-          children: [
-            PortfolioTile(
-              height: 150,
-              width: 150,
-            ),
-          ],
-        ),
+        PortfolioTile(),
       ],
-    );
+    ));
   }
 
   void _mail() async {

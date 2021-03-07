@@ -9,11 +9,11 @@ mixin Config {
   static const CV =
       'https://drive.google.com/file/d/1p36s7SF82R96J2-gCypdEemzMKcoMngX/view?usp=sharing';
 
-//Project Titles
+  //Project Titles
   static const ProjectTitle1 = 'Mera Desh - Educational App';
-  static const ProjectTitle2 = 'Mera Desh - Educational App';
-  static const ProjectTitle3 = 'Mera Desh - Educational App';
-  static const ProjectTitle4 = 'Mera Desh - Educational App';
+  static const ProjectTitle2 = 'Super Store - E-Commerce App';
+  static const ProjectTitle3 = 'Devomi - Portfolio';
+  static const ProjectTitle4 = 'Simple Calculator';
   var projectTitles = [
     'Mera desh - Educational App',
     'Super Store - E-Commerce App',
@@ -26,7 +26,7 @@ mixin Config {
     'https://github.com/om-chauhan/devomi',
     'https://github.com/om-chauhan/Simple-Calculator-Flutter'
   ];
-//Project URLS
+  //Project URL
   static const ProjectLink1 =
       'https://play.google.com/store/apps/details?id=com.adbytee.mera_desh';
   static const ProjectLink2 =

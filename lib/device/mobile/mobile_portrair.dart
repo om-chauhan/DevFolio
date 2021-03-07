@@ -15,8 +15,8 @@ class MobilePortrait extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return ListView(children: [
-      Column(
+    return SingleChildScrollView(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DevPic(
@@ -173,13 +173,10 @@ class MobilePortrait extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          PortfolioTile(
-            height: 150,
-            width: 150,
-          ),
+          PortfolioTile(),
         ],
       ),
-    ]);
+    );
   }
 
   void _mail() async {
