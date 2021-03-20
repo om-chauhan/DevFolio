@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import 'build_text.dart';
 
 class SkillsTile extends StatelessWidget {
@@ -27,7 +25,7 @@ class SkillsTile extends StatelessWidget {
       padding: EdgeInsets.all(5.0),
       child: Column(
         children: [
-          SvgPicture.asset(
+          Image.asset(
             image,
             height: imgHeight,
             width: imgWidth,

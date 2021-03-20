@@ -10,4 +10,4 @@ A new Flutter Portfolio.
 
 3. `flutter run`
 
-![Screenshot ](/screenshot/img1.jpg)
+![Screenshot ](/screenshot/img1.png)
