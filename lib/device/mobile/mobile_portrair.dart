@@ -119,7 +119,7 @@ class MobilePortrait extends StatelessWidget {
             height: 20.0,
           ),
           BuildText(
-            text: 'SKILS',
+            text: 'SKILLS',
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
