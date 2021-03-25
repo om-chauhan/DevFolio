@@ -11,9 +11,7 @@ class HeaderName extends StatelessWidget {
     return Row(
       children: [
         Icon(Icons.add),
-        SizedBox(
-          width: 10.0,
-        ),
+        SizedBox(width: 10.0),
         Text('Portfolio'),
       ],
     );

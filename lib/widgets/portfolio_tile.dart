@@ -184,6 +184,49 @@ class PortfolioTile extends StatelessWidget {
             ),
           ),
         ),
+        InkWell(
+          onTap: () async {
+            final url = Config.ProjectLink5;
+            await canLaunch(url)
+                ? await launch(url)
+                : throw 'Could not launch $url';
+          },
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
+                    child: BuildText(
+                      text: '05',
+                      color: Colors.black,
+                      size: 100,
+                      spacing: 2,
+                      fontweight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: BuildText(
+                    size: 12,
+                    text: Config.ProjectTitle5,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }

@@ -14,6 +14,7 @@ mixin Config {
   static const ProjectTitle2 = 'Super Store - E-Commerce App';
   static const ProjectTitle3 = 'DevFolio - Portfolio';
   static const ProjectTitle4 = 'Simple Calculator';
+  static const ProjectTitle5 = 'Google Search Clone';
   var projectTitles = [
     'Mera desh - Educational App',
     'Super Store - E-Commerce App',
@@ -34,4 +35,6 @@ mixin Config {
   static const ProjectLink3 = 'https://github.com/om-chauhan/DevFolio';
   static const ProjectLink4 =
       'https://github.com/om-chauhan/Simple-Calculator-Flutter';
+  static const ProjectLink5 =
+      'https://github.com/om-chauhan/google-search-clone-in-flutter';
 }

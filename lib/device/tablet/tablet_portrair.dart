@@ -1,3 +1,4 @@
+import 'package:devfolio/widgets/skills_set.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -5,7 +6,6 @@ import '../../helper/config.dart';
 import '../../widgets/build_Text.dart';
 import '../../widgets/build_button.dart';
 import '../../widgets/dev_pic.dart';
-import '../../widgets/skills_tile.dart';
 import '../../widgets/portfolio_tile.dart';
 import '../../widgets/social_menu.dart';
 
@@ -23,36 +23,28 @@ class TabletPortrait extends StatelessWidget {
             height: 300,
             width: 300,
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           BuildText(
             color: Colors.black,
             fontweight: FontWeight.normal,
             text: "Hello, I'm",
             size: 20.0,
           ),
-          SizedBox(
-            height: 10.0,
-          ),
+          SizedBox(height: 10.0),
           BuildText(
             color: Colors.black,
             fontweight: FontWeight.bold,
             text: 'Omprakash',
             size: 20.0,
           ),
-          SizedBox(
-            height: 10.0,
-          ),
+          SizedBox(height: 10.0),
           BuildText(
             color: Colors.black,
             fontweight: FontWeight.w400,
             text: 'Flutter Developer',
             size: 18.0,
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -90,9 +82,7 @@ class TabletPortrait extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -115,72 +105,21 @@ class TabletPortrait extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           BuildText(
             text: 'SKILLS',
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Wrap(
-            children: [
-              SkillsTile(
-                text: 'C',
-                color: Colors.black,
-                fontweight: FontWeight.normal,
-                image: 'assets/icons/c.png',
-                imgHeight: 50,
-                imgWidth: 50,
-              ),
-              SkillsTile(
-                text: 'C++',
-                color: Colors.black,
-                fontweight: FontWeight.normal,
-                image: 'assets/icons/c++.png',
-                imgHeight: 50,
-                imgWidth: 50,
-              ),
-              SkillsTile(
-                text: 'Java',
-                color: Colors.black,
-                fontweight: FontWeight.normal,
-                image: 'assets/icons/java.png',
-                imgHeight: 50,
-                imgWidth: 50,
-              ),
-              SkillsTile(
-                text: 'Python',
-                color: Colors.black,
-                fontweight: FontWeight.normal,
-                image: 'assets/icons/python.png',
-                imgHeight: 50,
-                imgWidth: 50,
-              ),
-              SkillsTile(
-                text: 'Dart',
-                color: Colors.black,
-                fontweight: FontWeight.normal,
-                image: 'assets/icons/dart.png',
-                imgHeight: 50,
-                imgWidth: 50,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
+          SkilsSet(),
+          SizedBox(height: 20.0),
           BuildText(
             text: 'PORTFOLIO',
             size: 20.0,
             fontweight: FontWeight.bold,
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           PortfolioTile(),
         ],
       ),
